@@ -326,13 +326,7 @@
   <ItemGroup>
     <ResourceCompile Include="Schedule.rc" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="StaticGrid\StaticGrid.vcxproj">
-      <Project>{1d0b3cd9-822f-468e-8c6a-7bd8f441af04}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ProjectExtensions>

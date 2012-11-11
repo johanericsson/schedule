@@ -105,7 +105,6 @@ void LeadNurseView::OnPrintWeek()
 		
 		DC.StartDoc(_T("myDoc"));
 		CTime lastDay = m_date += CTimeSpan(7,0,0,0);
-		m_date = period.m_dateRange.GetStartDate();
 		
 		for (
 			;m_date<lastDay;
@@ -118,7 +117,6 @@ void LeadNurseView::OnPrintWeek()
 		DC.EndDoc();
 		m_date -= CTimeSpan(7,0,0,0);
 	}
-}
 }
 
 void LeadNurseView::OnPrintall()
