@@ -16,6 +16,7 @@ ON_COMMAND(ID_FAST_FORWARD, OnNextWeek)
 ON_COMMAND(ID_FAST_REVERSE, OnPreviousWeek)
 ON_COMMAND(ID_PRINT_ONE, OnPrintOne)
 ON_COMMAND(ID_PRINTALL, OnPrintall)
+ON_COMMAND(ID_PRINT_WEEK,OnPrintWeek)
 END_MESSAGE_MAP()
 
 void LeadNurseView::OnPreviousDay()
@@ -104,7 +105,7 @@ void LeadNurseView::OnPrintWeek()
 		OnPrepareDC(&DC);
 		
 		DC.StartDoc(_T("myDoc"));
-		CTime lastDay = m_date += CTimeSpan(7,0,0,0);
+		CTime lastDay = m_date + CTimeSpan(7,0,0,0);
 		
 		for (
 			;m_date<lastDay;

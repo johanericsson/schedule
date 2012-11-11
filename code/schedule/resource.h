@@ -103,13 +103,14 @@
 #define ID_BUTTON32827                  32827
 #define ID_BUTTON32828                  32828
 #define ID_LEADNURSEBUTTON              32828
+#define ID_PRINT_WEEK                   32829
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        149
-#define _APS_NEXT_COMMAND_VALUE         32829
+#define _APS_NEXT_COMMAND_VALUE         32830
 #define _APS_NEXT_CONTROL_VALUE         1068
 #define _APS_NEXT_SYMED_VALUE           104
 #endif
