@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Schedule", "Schedule.vcxproj", "{F48B97A5-00E5-42CC-BA2C-754E1529440F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "staticgrid", "StaticGrid\staticgrid.vcxproj", "{77573A32-4431-4F1C-B0AC-05990B55C010}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F48B97A5-00E5-42CC-BA2C-754E1529440F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F48B97A5-00E5-42CC-BA2C-754E1529440F}.Debug|Win32.Build.0 = Debug|Win32
+		{F48B97A5-00E5-42CC-BA2C-754E1529440F}.Release|Win32.ActiveCfg = Release|Win32
+		{F48B97A5-00E5-42CC-BA2C-754E1529440F}.Release|Win32.Build.0 = Release|Win32
+		{77573A32-4431-4F1C-B0AC-05990B55C010}.Debug|Win32.ActiveCfg = Debug|Win32
+		{77573A32-4431-4F1C-B0AC-05990B55C010}.Debug|Win32.Build.0 = Debug|Win32
+		{77573A32-4431-4F1C-B0AC-05990B55C010}.Release|Win32.ActiveCfg = Release|Win32
+		{77573A32-4431-4F1C-B0AC-05990B55C010}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

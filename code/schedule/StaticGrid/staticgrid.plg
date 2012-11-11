@@ -1,0 +1,63 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: StaticGrid - Win32 DebugU--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\johane\LOCALS~1\Temp\RSP2E8.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D "_UNICODE" /FR"DebugU/" /Fp"DebugU/staticgrid.pch" /Yu"stdafx.h" /Fo"DebugU/" /Fd"DebugU/" /FD /GZ /c 
+"D:\src\emc\src\StaticGrid\FTSGridCtrl.cpp"
+"D:\src\emc\src\StaticGrid\FTSGridImpl.cpp"
+"D:\src\emc\src\StaticGrid\GridCell.cpp"
+"D:\src\emc\src\StaticGrid\GridCellBase.cpp"
+"D:\src\emc\src\StaticGrid\GridCtrl.cpp"
+"D:\src\emc\src\StaticGrid\GridDropTarget.cpp"
+"D:\src\emc\src\StaticGrid\InPlaceEdit.cpp"
+"D:\src\emc\src\StaticGrid\TitleTip.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\johane\LOCALS~1\Temp\RSP2E8.tmp" 
+Creating temporary file "C:\DOCUME~1\johane\LOCALS~1\Temp\RSP2E9.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D "_UNICODE" /FR"DebugU/" /Fp"DebugU/staticgrid.pch" /Yc"stdafx.h" /Fo"DebugU/" /Fd"DebugU/" /FD /GZ /c 
+"D:\src\emc\src\StaticGrid\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\johane\LOCALS~1\Temp\RSP2E9.tmp" 
+Creating temporary file "C:\DOCUME~1\johane\LOCALS~1\Temp\RSP2EA.tmp" with contents
+[
+/nologo /out:"Lib\StaticGridDU.lib" 
+.\DebugU\FTSGridCtrl.obj
+.\DebugU\FTSGridImpl.obj
+.\DebugU\GridCell.obj
+.\DebugU\GridCellBase.obj
+.\DebugU\GridCtrl.obj
+.\DebugU\GridDropTarget.obj
+.\DebugU\InPlaceEdit.obj
+.\DebugU\StdAfx.obj
+.\DebugU\TitleTip.obj
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\johane\LOCALS~1\Temp\RSP2EA.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+FTSGridCtrl.cpp
+FTSGridImpl.cpp
+GridCell.cpp
+GridCellBase.cpp
+GridCtrl.cpp
+GridDropTarget.cpp
+InPlaceEdit.cpp
+TitleTip.cpp
+Generating Code...
+Creating library...
+
+
+
+<h3>Results</h3>
+StaticGridDU.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

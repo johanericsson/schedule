@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[StaticGrid.dsp]
+SCC_Aux_Path = "\\rntserve\vss\"
+SCC_Project_Name = "$/Twister/EMC/src/StaticGrid", RQVAAAAA
