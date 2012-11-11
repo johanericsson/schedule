@@ -251,6 +251,10 @@ struct PickableVacationHeading : public PickableObject
 			ChooseNurse(GetPeriod().m_data.m_nurses.m_nurses,view->m_date);
 		if (nurse)
 		{
+			// Is she working this day already?
+			if (IsNurseAlreadyAssigned(GetPeriod(),view->m_date,*nurse))
+				throw OurException(nurse->GetName().FullName() + _T(" cannot be assigned vacation as (s)he is signed up for this day already."));
+				
 			AddVacationDlg dlg(*nurse,view->GetDaily().m_vacationSchedules);
 			if (IDOK==dlg.DoModal())
 			{
@@ -258,7 +262,6 @@ struct PickableVacationHeading : public PickableObject
 				view->GetDaily().m_vacationSchedules.push_back(dlg.m_sched);
 				UpdateAll();
 			}
-			
 		}
 	}
 	virtual PickableObject * Clone() const
@@ -480,6 +483,9 @@ struct PickableHeading : public PickableObject
 		Optional<Nurse> nurse = ChooseNurse(sortedNurses,view->m_date);
 		if (!nurse)
 			return;
+		if (IsNurseAlreadyAssigned(view->GetPeriod(),view->m_date,*nurse))
+				throw OurException(nurse->GetName().FullName() + _T(" cannot be assigned as (s)he is signed up for this day already."));
+		
 		AddEntryDlg dlg(*nurse);
 		if (IDOK != dlg.DoModal())
 			return;
@@ -487,7 +493,7 @@ struct PickableHeading : public PickableObject
 		view->AddUndoStep(_T("Adding schedule Entry for ") + nurse->GetName().FullName());
 		try
 		{
-			view->GetDaily().Add(Assignment(nurse->GetName(),dlg.m_startTime,dlg.m_numberOfHours));
+				view->GetDaily().Add(Assignment(nurse->GetName(),dlg.m_startTime,dlg.m_numberOfHours));
 		}
 		catch(OurException& ex)
 		{
@@ -626,6 +632,8 @@ int SignupView::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 void SignupView::OnLButtonUp(UINT nFlags, CPoint point)
 {
+	try
+	{
 	for (int i=0;i<m_entries.size();i++)
 	{
 		if (m_entries[i]->IsInPosition(point))
@@ -636,6 +644,8 @@ void SignupView::OnLButtonUp(UINT nFlags, CPoint point)
 			break;
 		}
 	}
+	}
+	MY_CATCH()
 	CScrollView::OnLButtonUp(nFlags, point);
 }
 

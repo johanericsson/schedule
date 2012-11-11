@@ -227,6 +227,18 @@ CString GetWorkingNotation(const Period& period,
 		return period.m_data.m_legend.GetAbbreviation(slot->startTime,slot->hours);
 }
 
+bool IsNurseAlreadyAssigned(const Period& period,
+							CTime dayTime,
+							const Nurse& nurse)
+{
+	// Is she working this day already?
+	CString isWorking = 
+		GetWorkingNotation(period,dayTime,nurse);
+	if (isWorking == _T("  "))
+		return false;
+	return true;
+}
+
 bool LessThan(const Nurse& nurse,const Name& name)
 {
 	return (nurse.GetName() < name);

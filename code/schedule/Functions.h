@@ -59,6 +59,11 @@ CString GetWorkingNotation(const Period& period,
 						   fixedScheduleOverrides = 
 						   vector<Slot>());
 
+bool IsNurseAlreadyAssigned(const Period& period,
+							CTime dayTime,
+							const Nurse& nurse);
+
+
 Optional<Nurse> GetNurse(const Period& period,const Name& name);
 
 
